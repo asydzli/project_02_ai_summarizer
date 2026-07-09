@@ -1,51 +1,57 @@
 # Project 02 - AI Text Summarizer
 
-## Deskripsi
+AI Text Summarizer adalah aplikasi Streamlit untuk merangkum teks panjang menjadi ringkasan yang lebih mudah dipahami. Project ini menggunakan Google Gemini API melalui package `google-genai`.
 
-AI Text Summarizer adalah aplikasi sederhana yang digunakan untuk merangkum teks panjang menggunakan Google Gemini AI.
+## Fitur
 
----
+- Input teks panjang
+- Pilihan panjang ringkasan
+- Pilihan format output
+- Validasi panjang teks
+- Error handling saat API gagal
+- Output ringkasan dalam bahasa Indonesia
+
+## Teknologi
+
+- Python 3.13+
+- Streamlit
+- Google Gemini API (`google-genai`)
+- python-dotenv
+- VS Code
+- Virtual Environment
 
 ## Cara Menjalankan
 
-Pastikan seluruh langkah pada bagian **Persiapan Lingkungan Pengembangan** di e-book telah dilakukan.
-
-Masuk ke folder project.
+1. Buat virtual environment.
 
 ```bash
-cd project_02_ai_text_summarizer
+python -m venv venv
 ```
 
-Kemudian jalankan aplikasi.
+2. Aktifkan virtual environment.
+
+```bash
+venv\Scripts\activate
+```
+
+3. Install dependency.
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Buat file `.env` berdasarkan `.env.example`, lalu isi API key Gemini.
+
+```env
+GEMINI_API_KEY=YOUR_API_KEY
+```
+
+5. Jalankan aplikasi.
 
 ```bash
 streamlit run app.py
 ```
 
----
+## Catatan
 
-## Fitur
-
-- Ringkas artikel
-- Ringkas materi belajar
-- Ringkas dokumen
-- Pilihan panjang ringkasan
-- Menggunakan Google Gemini AI
-
----
-
-## Skill
-
-- Streamlit
-- Gemini API
-- Prompt Engineering
-- Text Processing
-
----
-
-## Challenge
-
-- Tambahkan tombol Copy.
-- Tambahkan Download TXT.
-- Tambahkan pilihan bahasa output.
-- Tambahkan jumlah bullet point.
+Jangan upload file `.env` ke repository. File tersebut sudah masuk ke `.gitignore`.
